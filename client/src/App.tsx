@@ -6,9 +6,10 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import DashboardLayout from "./components/DashboardLayout";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import OpsFlow from "./pages/OpsFlow";
 
 function Router() {
-  return <DashboardLayout><Switch><Route path="/" component={Home} /><Route path="/pipeline" component={Home} /><Route path="/operations" component={Home} /><Route path="/process" component={Home} /><Route path="/methodology" component={Home} /><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch></DashboardLayout>;
+  return <DashboardLayout><Switch><Route path="/" component={Home} /><Route path="/pipeline" component={Home} /><Route path="/operations" component={Home} /><Route path="/process" component={Home} /><Route path="/methodology" component={Home} /><Route path="/opsflow" component={OpsFlow} /><Route path="/opsflow/process" component={OpsFlow} /><Route path="/opsflow/automation" component={OpsFlow} /><Route path="/opsflow/dashboard" component={OpsFlow} /><Route path="/opsflow/integrations" component={OpsFlow} /><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch></DashboardLayout>;
 }
 
 export default function App() {
