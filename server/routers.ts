@@ -1,4 +1,5 @@
-import { getAnalyticsSnapshot } from "./db";
+import { getAnalyticsSnapshot, getOpsflowSnapshot, recordOpsflowEvent } from "./db";
+import { z } from "zod";
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
@@ -16,6 +17,10 @@ export const appRouter = router({
   }),
   analytics: router({
     snapshot: publicProcedure.query(() => getAnalyticsSnapshot()),
+  }),
+  opsflow: router({
+    snapshot: publicProcedure.query(() => getOpsflowSnapshot()),
+    recordEvent: publicProcedure.input(z.object({ leadId: z.number().optional(), ruleId: z.number().optional(), eventType: z.string(), payload: z.record(z.string(), z.unknown()) })).mutation(({ input }) => recordOpsflowEvent(input)),
   }),
 });
 
