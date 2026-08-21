@@ -1,7 +1,7 @@
 import { drizzle } from "drizzle-orm/mysql2";
 import { eq } from "drizzle-orm";
 import { ENV } from "./_core/env";
-import { activities, contacts, kpiDefinitions, leads, projects, satisfactionScores, tasks, vendors } from "../drizzle/schema";
+import { activities, contacts, kpiDefinitions, leads, projects, satisfactionScores, tasks, vendors, opsflowActivities, opsflowAutomationRules, opsflowEvents, opsflowLeads, opsflowOwners, opsflowTasks } from "../drizzle/schema";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -40,6 +40,31 @@ export async function getAnalyticsData() {
     db.select().from(activities), db.select().from(satisfactionScores), db.select().from(vendors), db.select().from(kpiDefinitions),
   ]);
   return { leads: leadRows, contacts: contactRows, projects: projectRows, tasks: taskRows, activities: activityRows, satisfactionScores: satisfactionRows, vendors: vendorRows, kpiDefinitions: kpiRows };
+}
+
+export async function getOpsflowSnapshot() {
+  const db = await getDb();
+  if (!db) return { owners: [], leads: [], tasks: [], activities: [], rules: [], events: [] };
+  const [owners, leadRows, taskRows, activityRows, rules, events] = await Promise.all([
+    db.select().from(opsflowOwners), db.select().from(opsflowLeads), db.select().from(opsflowTasks),
+    db.select().from(opsflowActivities), db.select().from(opsflowAutomationRules), db.select().from(opsflowEvents),
+  ]);
+  return { owners, leads: leadRows, tasks: taskRows, activities: activityRows, rules, events };
+}
+
+export async function recordOpsflowEvent(input: { leadId?: number; ruleId?: number; eventType: string; payload: Record<string, unknown> }) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.insert(opsflowEvents).values({ leadId: input.leadId ?? null, ruleId: input.ruleId ?? null, eventType: input.eventType, payload: JSON.stringify(input.payload), occurredAt: new Date() });
+  return { inserted: true, result };
+}
+
+export function deriveOpsflowMetrics(data: { leads: Array<{ stage: string }>; tasks: Array<{ status: string; dueAt: Date }> }) {
+  const openLeads = data.leads.filter((lead) => !["Won", "Lost"].includes(lead.stage)).length;
+  const wonLeads = data.leads.filter((lead) => lead.stage === "Won").length;
+  const conversionRate = data.leads.length ? (wonLeads / data.leads.length) * 100 : 0;
+  const agingTasks = data.tasks.filter((task) => task.status !== "Done" && task.dueAt.getTime() < Date.now()).length;
+  return { openLeads, conversionRate, agingTasks };
 }
 
 export async function getAnalyticsSnapshot() {
