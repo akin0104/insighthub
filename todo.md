@@ -19,7 +19,19 @@
 - [x] Capture desktop and mobile screenshots for visual verification
 - [x] Save the final project checkpoint
 
-- [ ] Publish the completed InsightHub project to GitHub under the user’s account
-- [ ] Redesign the profile README from resume-style sections into business-expert build programs
-- [ ] Position the profile around business expertise, business analysis, business automation, and junior software engineering
-- [ ] Align the README structure with the example profile’s system detail, project tracks, status labels, and recruiter-facing evidence
+- [x] Publish the completed InsightHub project to GitHub under the user’s account
+- [x] Redesign the profile README from resume-style sections into business-expert build programs
+- [x] Position the profile around business expertise, business analysis, business automation, and junior software engineering
+- [x] Align the README structure with the example profile’s system detail, project tracks, status labels, and recruiter-facing evidence
+
+- [x] Verify live InsightHub routes, database loading, charts, methodology, and responsive behavior; export controls verified in code and route UI
+- [ ] Deploy the updated InsightHub app with OpsFlow and verify all live OpsFlow routes
+- [ ] Publish the updated OpsFlow source and README to the user’s GitHub repository
+- [ ] Save a final checkpoint containing the dedicated OpsFlow backend, UI, docs, and tests
+- [x] Plan OpsFlow process model with as-is/to-be maps, personas, requirements, and acceptance criteria
+- [x] Build OpsFlow core CRM domain model for leads, contacts, tasks, owners, statuses, and activities
+- [x] Build OpsFlow automation for follow-ups, assignment rules, status triggers, and audit history
+- [x] Build OpsFlow dashboard for pipeline, response time, task aging, and conversion views
+- [x] Add OpsFlow mock email, calendar, CRM, and webhook integration boundaries
+- [x] Add OpsFlow tests, documentation, process case study, and responsive UX
+- [ ] Validate and publish OpsFlow
