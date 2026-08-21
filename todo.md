@@ -18,3 +18,8 @@
 - [x] Run type checks, tests, and production build
 - [x] Capture desktop and mobile screenshots for visual verification
 - [x] Save the final project checkpoint
+
+- [ ] Publish the completed InsightHub project to GitHub under the user’s account
+- [ ] Redesign the profile README from resume-style sections into business-expert build programs
+- [ ] Position the profile around business expertise, business analysis, business automation, and junior software engineering
+- [ ] Align the README structure with the example profile’s system detail, project tracks, status labels, and recruiter-facing evidence
