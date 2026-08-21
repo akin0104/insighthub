@@ -50,3 +50,22 @@ The project documents every KPI with its definition, source, calculation logic, 
 ## Resume-ready impact statement
 
 > Built a governed client-operations analytics platform with relational data modeling, typed analytics procedures, Recharts dashboards, pipeline drop-off analysis, satisfaction reporting, process-efficiency metrics, CSV exports, KPI methodology documentation, and responsive recruiter-facing product design.
+
+
+## OpsFlow — Business Process and CRM Automation
+
+OpsFlow is the second build program in this portfolio. It turns prospect research, outreach, client coordination, CRM tracking, and process improvement into a working business-systems workspace.
+
+### Build stages
+
+| Stage | Evidence | Status |
+| --- | --- | --- |
+| Process model | As-is/to-be maps, personas, requirements, acceptance criteria | Complete |
+| Core domain | Dedicated owners, leads, tasks, activities, stages, and next actions | Complete |
+| Automation | Persisted rules, rule evaluation endpoint, and audit-event history | Complete |
+| Operations dashboard | Pipeline stages, task aging, conversion, ownership, and activity signals | Complete |
+| Integrations | Mock CRM, email, calendar, and webhook contracts | Complete |
+
+The central business question is: **How can a small team reduce manual follow-up work while making ownership and pipeline health visible?**
+
+The live OpsFlow workspace is available at `/opsflow` with routes for `/opsflow/process`, `/opsflow/automation`, `/opsflow/dashboard`, and `/opsflow/integrations`. Detailed evidence is documented in `docs/opsflow/`.
