@@ -69,3 +69,16 @@ OpsFlow is the second build program in this portfolio. It turns prospect researc
 The central business question is: **How can a small team reduce manual follow-up work while making ownership and pipeline health visible?**
 
 The live OpsFlow workspace is available at `/opsflow` with routes for `/opsflow/process`, `/opsflow/automation`, `/opsflow/dashboard`, and `/opsflow/integrations`. Detailed evidence is documented in `docs/opsflow/`.
+
+
+## Portfolio build programs
+
+| Program | Business question | Live route | Evidence |
+| --- | --- | --- | --- |
+| AlignIQ | How can skills alignment stay explainable instead of becoming an opaque score? | `/aligniq` | Weighted scoring model, typed report API, taxonomy, evidence traceability, evaluation fixtures, and bias limitations |
+| TrustDesk | How can teams use internal knowledge without losing source evidence or privacy boundaries? | `/trustdesk` | Synthetic corpus, retrieval comparison, citation coverage, groundedness checks, refusal tests, and guardrails |
+| GrowthLab | How can digital activity become measurable strategy and experimentation? | `/growthlab` | Event taxonomy, funnel analytics, campaign reporting, privacy boundaries, and experiment interpretation |
+
+These programs extend InsightHub and OpsFlow into a connected recruiter portfolio: decision intelligence, business systems, workforce intelligence, responsible AI, and digital growth analytics. All demo records are synthetic and labeled as such.
+
+Detailed implementation notes are available in `docs/aligniq.md`, `docs/trustdesk.md`, and `docs/growthlab.md`.
