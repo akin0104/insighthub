@@ -82,3 +82,14 @@ The live OpsFlow workspace is available at `/opsflow` with routes for `/opsflow/
 These programs extend InsightHub and OpsFlow into a connected recruiter portfolio: decision intelligence, business systems, workforce intelligence, responsible AI, and digital growth analytics. All demo records are synthetic and labeled as such.
 
 Detailed implementation notes are available in `docs/aligniq.md`, `docs/trustdesk.md`, and `docs/growthlab.md`.
+
+
+## Bimshimer Hair — WordPress-style CMS storefront
+
+Bimshimer Hair is a fictional beauty-commerce case study built as a realistic WordPress-style storefront and content-operations workspace. It demonstrates responsive product browsing, hair and skincare catalog structure, product-detail routing, a demo bag, editorial content, content publishing states, inventory signals, order workflow visibility, and an explicit boundary around real payments and fulfillment.
+
+**Live routes:** `/bimshimer`, `/bimshimer/shop`, `/bimshimer/hair`, `/bimshimer/skincare`, `/bimshimer/product/:id`, `/bimshimer/journal`, `/bimshimer/about`, `/bimshimer/contact`, `/bimshimer/cart`, and `/bimshimer/admin`.
+
+**Truthful resume wording:** Built a WordPress-style beauty storefront and CMS operations demo with responsive product browsing, publishing states, inventory signals, order workflow views, and accessible content structure. This project is not presented as a production WordPress installation.
+
+Documentation: [`docs/bimshimer-hair.md`](docs/bimshimer-hair.md).

@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/sidebar";
 import { startLogin } from "@/const";
 import { useIsMobile } from "@/hooks/useMobile";
-import { Activity, BookOpen, BriefcaseBusiness, ChartNoAxesCombined, Gauge, LayoutDashboard, LogOut, PanelLeft, Settings2, Workflow, Target, ShieldCheck, TrendingUp } from "lucide-react";
+import { Activity, BookOpen, BriefcaseBusiness, ChartNoAxesCombined, Gauge, LayoutDashboard, LogOut, PanelLeft, Settings2, Workflow, Target, ShieldCheck, TrendingUp, Store } from "lucide-react";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import { DashboardLayoutSkeleton } from './DashboardLayoutSkeleton';
@@ -37,6 +37,7 @@ const menuItems = [
   { icon: Target, label: "AlignIQ skills intelligence", path: "/aligniq" },
   { icon: ShieldCheck, label: "TrustDesk responsible AI", path: "/trustdesk" },
   { icon: TrendingUp, label: "GrowthLab conversion intelligence", path: "/growthlab" },
+  { icon: Store, label: "Bimshimer Hair storefront", path: "/bimshimer" },
 ];
 
 const SIDEBAR_WIDTH_KEY = "sidebar-width";

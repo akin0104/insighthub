@@ -56,3 +56,17 @@
 - [x] Add SQL-backed or documented SQL funnel, cohort, and drop-off analytics for GrowthLab
 - [x] Capture mobile verification for TrustDesk and GrowthLab after the final changes
 - [x] Add explicit Discover → Engage → Convert → Activate steps to the GrowthLab landing page and reverify the landing route
+
+- [ ] Confirm whether the WordPress request requires a real WordPress installation or a clearly labeled WordPress-style CMS demo
+- [ ] Obtain the reference URL or screenshot for the requested visual and functional style
+- [ ] Design the WordPress-focused portfolio site, CMS workflow, and recruiter evidence
+- [ ] Build and test the WordPress-focused project
+- [ ] Publish the WordPress project to GitHub with truthful experience wording
+
+- [x] Confirm Bimshimer Hair storefront scope, product categories, and visual direction
+- [ ] Generate professional hair and skincare product imagery for the storefront
+- [ ] Build a realistic WordPress-style public Bimshimer Hair storefront
+- [ ] Build CMS-style product, content, inventory, and order-operations views
+- [x] Add responsive accessibility, product browsing, cart interactions, and clear demo states
+- [ ] Add recruiter-facing documentation that accurately labels the project as WordPress-style
+- [ ] Validate the storefront and publish the project to GitHub
