@@ -57,16 +57,16 @@
 - [x] Capture mobile verification for TrustDesk and GrowthLab after the final changes
 - [x] Add explicit Discover → Engage → Convert → Activate steps to the GrowthLab landing page and reverify the landing route
 
-- [ ] Confirm whether the WordPress request requires a real WordPress installation or a clearly labeled WordPress-style CMS demo
-- [ ] Obtain the reference URL or screenshot for the requested visual and functional style
-- [ ] Design the WordPress-focused portfolio site, CMS workflow, and recruiter evidence
-- [ ] Build and test the WordPress-focused project
-- [ ] Publish the WordPress project to GitHub with truthful experience wording
+- [x] Confirm whether the WordPress request requires a real WordPress installation or a clearly labeled WordPress-style CMS demo
+- [x] Record the user-provided Bimshimer Hair beauty-store brief as the visual and functional design source
+- [x] Design the WordPress-focused portfolio site, CMS workflow, and recruiter evidence
+- [x] Build and test the WordPress-focused project; TypeScript, 12 Vitest tests, production build, and visual routes verified
+- [x] Publish the WordPress project to GitHub with truthful experience wording
 
 - [x] Confirm Bimshimer Hair storefront scope, product categories, and visual direction
-- [ ] Generate professional hair and skincare product imagery for the storefront
-- [ ] Build a realistic WordPress-style public Bimshimer Hair storefront
-- [ ] Build CMS-style product, content, inventory, and order-operations views
+- [x] Generate professional hair and skincare product imagery for the storefront; verified rendered assets on storefront and product-detail screenshots
+- [x] Build a realistic WordPress-style public Bimshimer Hair storefront
+- [x] Build CMS-style product, content, inventory, and order-operations views
 - [x] Add responsive accessibility, product browsing, cart interactions, and clear demo states
-- [ ] Add recruiter-facing documentation that accurately labels the project as WordPress-style
+- [x] Add recruiter-facing documentation that accurately labels the project as WordPress-style
 - [ ] Validate the storefront and publish the project to GitHub
