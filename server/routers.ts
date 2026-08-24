@@ -1,4 +1,5 @@
 import { getAnalyticsSnapshot, getOpsflowSnapshot, recordOpsflowEvent } from "./db";
+import { alignIqEvidence, alignIqOccupation, alignIqProfile, buildAlignmentReport, runAlignIqEvaluation } from "@shared/aligniq";
 import { z } from "zod";
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
@@ -21,6 +22,13 @@ export const appRouter = router({
   opsflow: router({
     snapshot: publicProcedure.query(() => getOpsflowSnapshot()),
     recordEvent: publicProcedure.input(z.object({ leadId: z.number().optional(), ruleId: z.number().optional(), eventType: z.string(), payload: z.record(z.string(), z.unknown()) })).mutation(({ input }) => recordOpsflowEvent(input)),
+  }),
+  aligniq: router({
+    profile: publicProcedure.query(() => alignIqProfile),
+    occupation: publicProcedure.query(() => alignIqOccupation),
+    evidence: publicProcedure.query(() => alignIqEvidence),
+    report: publicProcedure.query(() => buildAlignmentReport()),
+    evaluation: publicProcedure.query(() => runAlignIqEvaluation()),
   }),
 });
 
